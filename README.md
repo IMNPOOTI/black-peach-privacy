@@ -1,6 +1,6 @@
 # The Black Peach — Discord Application Privacy Archive
 
-A static privacy-policy website for the seven Discord applications associated with **The Black Peach**.
+A static privacy-policy website for the seven Discord applications associated with [**The Black Peach**](https://discord.gg/UJqXaaaHSj).
 
 ## Privacy policies
 
@@ -17,3 +17,5 @@ Each application has its own privacy policy, prepared from the application's des
 | Zombie Suzu | Restricted testing application | [Privacy policy](policies/zombie-suzu.html) |
 
 **Privacy contact:** [blackpeach-privacy@proton.me](mailto:blackpeach-privacy@proton.me)
+**Invite Link:** [The Black Peach](https://discord.gg/UJqXaaaHSj)
+
