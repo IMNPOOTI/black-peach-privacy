@@ -1,0 +1,44 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Kashima — Privacy Policy · The Black Peach</title><meta name="description" content="Privacy policy for Kashima, The Black Peach’s virtual UFC betting Discord bot."><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to main content</a><div class="top-ribbon"></div>
+<header class="header"><div class="shell nav"><a class="logo" href="../index.html" aria-label="The Black Peach privacy index"><span class="logo-mark"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12C14 4 5 13 7 24c1 10 10 12 13 8 7 5 15-1 14-11C33 10 24 5 21 12" fill="#522737" stroke="#d78861" stroke-width="1.6"/><path d="M20 13c1-5 6-8 11-8M20 14c-3-5-7-6-10-5M20 31v7m0-4-5 4m5-2 5 3" stroke="#c18177" fill="none" stroke-width="1.6" stroke-linecap="round"/></svg></span><span><span class="logo-name">THE BLACK PEACH</span><span class="logo-sub">Privacy archive</span></span></a><nav class="nav-links" aria-label="Primary"><a href="../index.html#apps">Applications</a><a href="../index.html#about">About this archive</a><span class="nav-pill">Privacy archive</span></nav></div></header>
+<main id="main"><section class="policy-hero"><div class="shell"><a class="back" href="../index.html#apps">← All applications</a><div class="policy-head"><div><p class="tiny-label">Application 03 / 07</p><h1>Kashima</h1><p class="category">UFC betting · virtual currency</p><p class="intro">Community UFC betting using fictional balances, fighter selections and leaderboards. No real-money payments are handled.</p><span class="badge-draft">Privacy policy · 9 October 2026</span></div><img class="policy-portrait" src="../assets/icons/kashima.png" alt="Kashima application icon" width="256" height="256"></div></div></section>
+<section class="policy-main"><div class="shell"><div class="policy-cols">
+<article class="paper">
+  <p class="tiny-label">01 / Privacy policy · effective 9 October 2026</p>
+  <h2>Virtual bets. Clear records.</h2>
+  <p>Kashima runs community UFC betting with <strong>fictional in-bot currency only</strong>. When you take part, the bot processes your Discord identity and betting activity so it can maintain balances, accept bets, settle wagers and display standings. It does not process bank details, payment cards or real-money deposits.</p>
+  <h3 class="policy-subheading">Information collected and stored</h3>
+  <ul class="verify-list">
+    <li><strong>Discord account ID and display name:</strong> identify your account, associate your wagers with you, and show your name on betting boards and leaderboards. The stored display name is refreshed during certain interactions.</li>
+    <li><strong>Virtual wallet:</strong> balance, debt, buy-ins, and the date your wallet record was created.</li>
+    <li><strong>Straight bets:</strong> selected event and market, fighter or over/under selection, stake, odds, status and creation time.</li>
+    <li><strong>Parlays:</strong> event and fighter selections for each leg, individual and combined odds, stake, payout, status, creation time and settlement time when applicable.</li>
+    <li><strong>Virtual advances and repayments:</strong> records of advances (buy-ins), amounts and associated debt, plus changes to wallet and debt totals.</li>
+  </ul>
+  <div class="auth-confirmed"><strong>What Kashima does not do:</strong> It does not request the privileged Message Content Intent, monitor ordinary channel conversations or store a message archive. It does not collect payment or banking information.</div>
+  <h3 class="policy-subheading">Where information is kept</h3>
+  <p>Participant records are saved in a local SQLite database (<code>kashima.db</code>) operated by the bot owner. The bot also keeps UFC event schedule data in a local cache; this schedule is not a database of Discord members.</p>
+  <p>Before certain administrative fight-closing operations, Kashima makes local database backups for recovery. Its code keeps up to <strong>five of the most recent database backup files</strong>; backups may contain earlier copies of account and betting records. The code does not set a maximum age for those backups.</p>
+  <h3 class="policy-subheading">When information is visible</h3>
+  <p>Some information is deliberately shared in the Discord server as part of the game: public standings show display names, virtual wallet values and debt; closing a fight posts active betting tickets and parlay details, which may include names and stakes. Individual <code>/wallet</code> responses are private (ephemeral), while other betting announcements can appear publicly. Messages already sent to Discord are subject to Discord's own retention and deletion behaviour.</p>
+  <h3 class="policy-subheading">Third-party services</h3>
+  <p>Kashima uses <strong>Discord</strong> to receive commands and display results. Its UFC event lookup requests public fight-card information from <strong>ESPN</strong> and caches that event information locally. The code does not send members' wallet, betting or Discord account records to ESPN.</p>
+  <h3 class="policy-subheading">Retention and protection</h3>
+  <p>The current code does <strong>not automatically expire</strong> participant records when a bet finishes or a member leaves the server. Records remain in the local database until they are removed or the database is retired. Local backup copies must also be considered when handling deletion requests. Database files are not application-level encrypted by this script; protection depends on the machine's storage and access controls.</p>
+</article>
+<aside class="paper note-panel">
+  <p class="tiny-label">02 / Your choices</p>
+  <h2>Your betting information.</h2>
+  <p>You may use Kashima's commands to view your own virtual balance and pending wagers. Server members can also view the published standings and any publicly announced tickets.</p>
+  <h3 class="policy-subheading">Access, correction and deletion</h3>
+  <p>To request a copy of the information held about you, correct an account association, or ask for your records to be removed, contact:</p>
+  <p><a href="mailto:blackpeach-privacy@proton.me">blackpeach-privacy@proton.me</a></p>
+  <p>Include your Discord user ID so we can identify the correct account. Requests are handled by the operator; the current bot has <strong>no built-in self-service deletion command</strong>. Where a request involves pending virtual bets, we may need to cancel or resolve those entries as part of deletion. We will also account for retained database backups.</p>
+  <h3 class="policy-subheading">Other information</h3>
+  <p>The bot's use of Discord is also subject to Discord's privacy practices. UFC event schedules are obtained from ESPN; player betting records are not provided to that service.</p>
+  <ul class="verify-list">
+    <li><a href="https://discord.com/privacy" rel="noopener noreferrer">Discord Privacy Policy</a></li>
+  </ul>
+  <div class="auth-confirmed"><strong>Scope:</strong> This policy covers the Kashima Discord application and its local betting database. <strong>All dollar figures within the bot represent fictional game currency.</strong></div>
+  <p class="caps">Last updated / 9 October 2026</p>
+</aside></div>
+<div class="subfoot"><span>Application 03 of 07 · The Black Peach</span><a href="../index.html#apps">← Back to all applications</a></div></div></section></main><footer class="footer"><div class="shell foot"><span><strong>THE BLACK PEACH</strong> &nbsp; / &nbsp; DISCORD APPLICATIONS</span><span>Three policies completed · Four awaiting review</span><a href="../index.html#apps">Back to applications ↑</a></div></footer></body></html>

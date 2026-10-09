@@ -1,0 +1,43 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Lady C — Privacy Policy · The Black Peach</title><meta name="description" content="Privacy policy for Lady C, The Black Peach’s Discord chess puzzle bot."><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to main content</a><div class="top-ribbon"></div>
+<header class="header"><div class="shell nav"><a class="logo" href="../index.html" aria-label="The Black Peach privacy index"><span class="logo-mark"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12C14 4 5 13 7 24c1 10 10 12 13 8 7 5 15-1 14-11C33 10 24 5 21 12" fill="#522737" stroke="#d78861" stroke-width="1.6"/><path d="M20 13c1-5 6-8 11-8M20 14c-3-5-7-6-10-5M20 31v7m0-4-5 4m5-2 5 3" stroke="#c18177" fill="none" stroke-width="1.6" stroke-linecap="round"/></svg></span><span><span class="logo-name">THE BLACK PEACH</span><span class="logo-sub">Privacy archive</span></span></a><nav class="nav-links" aria-label="Primary"><a href="../index.html#apps">Applications</a><a href="../index.html#about">About this archive</a><span class="nav-pill">Privacy archive</span></nav></div></header>
+<main id="main"><section class="policy-hero"><div class="shell"><a class="back" href="../index.html#apps">← All applications</a><div class="policy-head"><div><p class="tiny-label">Application 04 / 07</p><h1>Lady C</h1><p class="category">Chess puzzles and profiles</p><p class="intro">Chess puzzles, personal ratings and standings, including blind puzzles and Human Tower challenges.</p><span class="badge-draft">Privacy policy · 9 October 2026</span></div><img class="policy-portrait" src="../assets/icons/lady-c.png" alt="Lady C application icon" width="256" height="256"></div></div></section>
+<section class="policy-main"><div class="shell"><div class="policy-cols">
+<article class="paper">
+  <p class="tiny-label">01 / Privacy policy · effective 9 October 2026</p>
+  <h2>Chess statistics, not chat archives.</h2>
+  <p>Lady C provides chess puzzles, ratings, leaderboards and optional lookups of public chess profiles. Its permanent player database is focused on puzzle progress and statistics, rather than conversations.</p>
+  <h3 class="policy-subheading">Information collected and stored</h3>
+  <ul class="verify-list">
+    <li><strong>Discord user ID:</strong> the identifier used to retrieve and update each player's statistics. The local database stores the ID, not a permanent copy of the player's Discord display name or avatar.</li>
+    <li><strong>Normal and blind-puzzle performance:</strong> current and peak ELO, streaks, completed puzzles, successful and failed attempts, and hints used.</li>
+    <li><strong>Human Tower and Blind Tower progress:</strong> run counts, highest floor cleared, total floors cleared and the current checkpoint.</li>
+  </ul>
+  <p>These records are saved in a local SQLite database (<code>lady_c.db</code>). A player record may be created when a chess command needs it, including when another member requests that person's <code>/profile</code>.</p>
+  <h3 class="policy-subheading">Message content and interactions</h3>
+  <p>Lady C has Discord's <strong>Message Content Intent</strong> enabled for a specific feature: it checks incoming non-bot messages against a locally configured set of thank-you phrases and may post a preset media response. The code does <strong>not</strong> save those message texts, build a conversation database or use them to train a model.</p>
+  <p>Puzzle selections, moves, hints and unfinished puzzle state are handled in memory during an active session. Inactive sessions time out after approximately <strong>20 minutes</strong>. Rated outcomes and Tower progress are recorded as statistics; the bot does not save a full personal move-by-move puzzle history in its player table.</p>
+  <h3 class="policy-subheading">What other members can see</h3>
+  <p>When requested, Lady C shows puzzle standings and user profiles in Discord. To label those results it can retrieve Discord display names and avatars. Standings names are reused from an in-memory cache for approximately one hour; stale entries may remain in memory until replaced or the bot restarts. This cache is not part of the permanent player database.</p>
+  <h3 class="policy-subheading">Chess websites and public profiles</h3>
+  <p>Lady C uses a local Lichess puzzle dataset and may request public source-game PGN data from <strong>Lichess</strong> to prepare blind puzzles. The optional <code>/online-profile</code> command sends the chess-site username supplied in the command to <strong>Lichess</strong> or <strong>Chess.com</strong> to retrieve public account information. This public profile information may include ratings, activity, a biography, location or other details the chess-site account has made public, which Lady C then displays in Discord. The bot does not write those external profiles to its player database.</p>
+  <h3 class="policy-subheading">Retention and protection</h3>
+  <p>The current code does <strong>not automatically delete</strong> ratings or statistics when a user leaves the server or becomes inactive. Player data remains locally until removed by the operator or the database is retired. The script has no scheduled personal-data backup routine and no application-level database encryption; storage protection relies on the machine's access controls.</p>
+</article>
+<aside class="paper note-panel">
+  <p class="tiny-label">02 / Your choices</p>
+  <h2>Your chess information.</h2>
+  <p>You can view your recorded statistics with <code>/profile</code>, and the published leaderboard with <code>/standings</code>. The optional external profile lookup only runs when someone supplies a chess-site username.</p>
+  <h3 class="policy-subheading">Access, correction and deletion</h3>
+  <p>To request access to your record, correct an account association, or ask for your puzzle statistics to be removed, contact:</p>
+  <p><a href="mailto:blackpeach-privacy@proton.me">blackpeach-privacy@proton.me</a></p>
+  <p>Include your Discord user ID so we can locate your record. Requests are handled by the operator; the current bot has <strong>no built-in self-service deletion command</strong>. Removing the local record does not automatically delete messages previously posted to Discord.</p>
+  <h3 class="policy-subheading">Third-party policies</h3>
+  <ul class="verify-list">
+    <li><a href="https://discord.com/privacy" rel="noopener noreferrer">Discord Privacy Policy</a></li>
+    <li><a href="https://lichess.org/privacy" rel="noopener noreferrer">Lichess Privacy Policy</a></li>
+    <li><a href="https://www.chess.com/legal/privacy" rel="noopener noreferrer">Chess.com Privacy Policy</a></li>
+  </ul>
+  <div class="auth-confirmed"><strong>Scope:</strong> This policy covers Lady C's Discord interactions, locally stored player statistics and optional public chess-site lookups. It does not cover data held independently in members' Lichess or Chess.com accounts.</div>
+  <p class="caps">Last updated / 9 October 2026</p>
+</aside></div>
+<div class="subfoot"><span>Application 04 of 07 · The Black Peach</span><a href="../index.html#apps">← Back to all applications</a></div></div></section></main><footer class="footer"><div class="shell foot"><span><strong>THE BLACK PEACH</strong> &nbsp; / &nbsp; DISCORD APPLICATIONS</span><span>Three policies completed · Four awaiting review</span><a href="../index.html#apps">Back to applications ↑</a></div></footer></body></html>

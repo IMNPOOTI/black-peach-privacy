@@ -1,0 +1,45 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Yagami — Privacy Policy · The Black Peach</title><meta name="description" content="Privacy policy for Yagami, The Black Peach Discord application."><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to main content</a><div class="top-ribbon"></div>
+<header class="header"><div class="shell nav"><a class="logo" href="../index.html" aria-label="The Black Peach privacy index"><span class="logo-mark"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12C14 4 5 13 7 24c1 10 10 12 13 8 7 5 15-1 14-11C33 10 24 5 21 12" fill="#522737" stroke="#d78861" stroke-width="1.6"/><path d="M20 13c1-5 6-8 11-8M20 14c-3-5-7-6-10-5M20 31v7m0-4-5 4m5-2 5 3" stroke="#c18177" fill="none" stroke-width="1.6" stroke-linecap="round"/></svg></span><span><span class="logo-name">THE BLACK PEACH</span><span class="logo-sub">Privacy archive</span></span></a><nav class="nav-links" aria-label="Primary"><a href="../index.html#apps">Applications</a><a href="../index.html#about">About this archive</a><span class="nav-pill">Privacy archive</span></nav></div></header>
+<main id="main"><section class="policy-hero"><div class="shell"><a class="back" href="../index.html#apps">← All applications</a><div class="policy-head"><div><p class="tiny-label">Application 06 / 07</p><h1>Yagami</h1><p class="category">Games · movie lookups</p><p class="intro">Discord word games, Family Feud, film searches and saved game statistics.</p><span class="badge-draft">Privacy policy · 9 October 2026</span></div><img class="policy-portrait" src="../assets/icons/yagami.png" alt="Yagami application icon" width="256" height="256"></div></div></section>
+<section class="policy-main"><div class="shell"><div class="policy-cols">
+<article class="paper">
+  <p class="tiny-label">01 / Privacy policy · effective 9 October 2026</p>
+  <h2>Word games and film searches.</h2>
+  <p>Yagami offers interactive games, including Wordle, Scrabble-style games, Word Power and Family Feud, as well as film information through the <code>/movie</code> command. The bot uses information submitted through Discord interactions to operate those features. It does not need to build a transcript of ordinary channel conversations for the reviewed games. The supplied launcher does not enable Discord's Message Content Intent.</p>
+  <h3 class="policy-subheading">Information collected and stored</h3>
+  <ul class="verify-list">
+    <li><strong>Discord user IDs and display names:</strong> identify players and associate their game statistics with the correct Discord accounts.</li>
+    <li><strong>Wordle results:</strong> games played, wins, losses, streaks, total winning guesses and the number of wins in each guess count.</li>
+    <li><strong>Scrabble-style results:</strong> games played, cumulative score, highest score, bingos and full-board clears.</li>
+    <li><strong>Word Power results:</strong> games played, high game score, highest-scoring word and its text, total and average-related scoring data, word counts, ranks, rank frequencies and last-played timestamp.</li>
+  </ul>
+  <p>Those records are saved locally in the operator's SQLite database, <code>data/wordgames.db</code>. This is a game-statistics database, not a record of every word submitted or every Discord message read.</p>
+  <h3 class="policy-subheading">Information used during a game</h3>
+  <p>During an active game, Yagami temporarily processes your Discord user ID, guesses or submitted words, game board, score and progress. Family Feud also temporarily keeps players' display names, guesses, strikes and scores for the round. The reviewed code keeps this active-game information in application memory and removes it when games end; it does not create a separate permanent Family Feud results table.</p>
+  <p>Yagami creates game-board images as temporary local files. The reviewed game modules normally remove these files after they are attached to a Discord message. Once posted, the game display, results and attachments may remain visible in the channel according to Discord's message-retention behaviour, even after the bot forgets the active game.</p>
+  <h3 class="policy-subheading">Film information and third-party services</h3>
+  <p>When you use <code>/movie</code>, the film title, year or IMDb identifier you enter is used to search <strong>The Movie Database (TMDb)</strong>. The bot requests film metadata and poster images from TMDb and displays information and links to TMDb, IMDb or YouTube. The reviewed code does not add your Discord user ID or your game statistics to these TMDb requests. TMDb may process the search request and the server's technical connection information under its own privacy practices.</p>
+  <p>The remaining reviewed games use local question or dictionary files and Discord interactions. No external advertising service or user-behaviour analytics integration was identified in the supplied modules.</p>
+  <h3 class="policy-subheading">Retention and security</h3>
+  <p>Saved game statistics are kept across restarts. The reviewed code does not automatically expire them or delete them when a member leaves the server; records remain until the operator removes them or retires the database. The application code uses ordinary SQLite storage without adding database encryption, so the security of that file depends on the protections in place on the hosting computer.</p>
+  <p>Discord itself retains interactions, messages and game attachments according to its own policies. Failed or interrupted operations can occasionally leave temporary image files behind; they are not intended as a permanent user-data archive.</p>
+
+</article>
+<aside class="paper note-panel">
+  <p class="tiny-label">02 / Your choices</p>
+  <h2>Your game statistics.</h2>
+  <p>You can request your stored game statistics or their removal. Some statistics are viewable directly through Yagami's game-specific commands, including <code>/wordle_stats</code>, <code>/scrabble_stats</code> and <code>/word_power_stats</code>.</p>
+  <h3 class="policy-subheading">Access, correction and deletion</h3>
+  <p>For a copy of the information associated with your account, a correction, or deletion of stored game results, email:</p>
+  <p><a href="mailto:blackpeach-privacy@proton.me">blackpeach-privacy@proton.me</a></p>
+  <p>Please include your Discord user ID so the operator can locate the correct record. Requests are handled manually; the reviewed game modules do not include a self-service data deletion command. Removing the local database record does not automatically erase Discord posts that were previously sent.</p>
+  <h3 class="policy-subheading">Other privacy information</h3>
+  <ul class="verify-list">
+    <li><a href="https://discord.com/privacy" rel="noopener noreferrer">Discord Privacy Policy</a></li>
+    <li><a href="https://www.themoviedb.org/privacy-policy" rel="noopener noreferrer">TMDb Privacy Policy</a></li>
+  </ul>
+  <div class="auth-confirmed"><strong>Review scope:</strong> This policy was checked against the supplied Yagami launcher (<code>Yagami(1).py</code>), game modules (<code>cogs.zip</code>) and shared utilities (<code>utils.zip</code>). The operator subsequently confirmed removal of the temporary interaction diagnostic listener. Deployment configuration and any modules added later have not been independently reviewed; changes to their data handling may require an update.</div>
+  <p class="caps">Last updated / 9 October 2026</p>
+
+</aside></div>
+<div class="subfoot"><span>Application 06 of 07 · The Black Peach</span><a href="../index.html#apps">← Back to all applications</a></div></div></section></main><footer class="footer"><div class="shell foot"><span><strong>THE BLACK PEACH</strong> &nbsp; / &nbsp; DISCORD APPLICATIONS</span><span>Seven application policies available</span><a href="../index.html#apps">Back to applications ↑</a></div></footer></body></html>

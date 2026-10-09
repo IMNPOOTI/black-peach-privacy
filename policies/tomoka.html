@@ -1,0 +1,42 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="color-scheme" content="dark"><title>Tomoka — Privacy Policy · The Black Peach</title><meta name="description" content="Privacy policy for Tomoka, The Black Peach STARDOM predictions Discord bot."><link rel="icon" type="image/svg+xml" href="../assets/favicon.svg"><link rel="stylesheet" href="../assets/style.css"></head><body><a class="skip" href="#main">Skip to main content</a><div class="top-ribbon"></div>
+<header class="header"><div class="shell nav"><a class="logo" href="../index.html" aria-label="The Black Peach privacy index"><span class="logo-mark"><svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 12C14 4 5 13 7 24c1 10 10 12 13 8 7 5 15-1 14-11C33 10 24 5 21 12" fill="#522737" stroke="#d78861" stroke-width="1.6"/><path d="M20 13c1-5 6-8 11-8M20 14c-3-5-7-6-10-5M20 31v7m0-4-5 4m5-2 5 3" stroke="#c18177" fill="none" stroke-width="1.6" stroke-linecap="round"/></svg></span><span><span class="logo-name">THE BLACK PEACH</span><span class="logo-sub">Privacy archive</span></span></a><nav class="nav-links" aria-label="Primary"><a href="../index.html#apps">Applications</a><a href="../index.html#about">About this archive</a><span class="nav-pill">Privacy archive</span></nav></div></header>
+<main id="main"><section class="policy-hero"><div class="shell"><a class="back" href="../index.html#apps">← All applications</a><div class="policy-head"><div><p class="tiny-label">Application 05 / 07</p><h1>Tomoka</h1><p class="category">STARDOM · wrestling predictions</p><p class="intro">STARDOM event predictions, private picks, public competition standings and optional event notifications.</p><span class="badge-draft">Privacy policy · 9 October 2026</span></div><img class="policy-portrait" src="../assets/icons/tomoka.png" alt="Tomoka application icon" width="256" height="256"></div></div></section>
+<section class="policy-main"><div class="shell"><div class="policy-cols">
+<article class="paper">
+  <p class="tiny-label">01 / Privacy policy · effective 9 October 2026</p>
+  <h2>Predictions, not conversations.</h2>
+  <p>Tomoka lets members make predictions about STARDOM wrestling events, review their picks, compare scores and opt into event notifications. The bot uses Discord account identifiers to connect each person's selections to their predictions.</p>
+  <h3 class="policy-subheading">Information collected and stored</h3>
+  <ul class="verify-list">
+    <li><strong>Discord user ID:</strong> identifies which participant submitted each prediction.</li>
+    <li><strong>Prediction details:</strong> the relevant event ID, match number, question identifier and order, and the answer selected for that question (such as a winner or match result).</li>
+    <li><strong>Competition scores:</strong> current-event and all-time totals are calculated from stored predictions and matching results when the leaderboard is requested.</li>
+  </ul>
+  <p>Selections are saved in a local SQLite database (<code>predictions.db</code>) operated by the bot owner. The supplied code also reads local event information (<code>event.json</code>) and wrestler power-ranking data (<code>ratings.json</code>); those files contain wrestling content rather than a collected Discord chat history. The leaderboard references a <code>results</code> database table, but management of that table is not shown in this file.</p>
+  <h3 class="policy-subheading">Discord interactions and notifications</h3>
+  <p>The <code>/predict</code> and <code>/picks</code> commands display your questions and saved selections privately to you using Discord's ephemeral responses. The bot checks who is interacting with a prediction menu so another person cannot submit answers on your behalf.</p>
+  <p>Tomoka can read your current server roles for its <code>/notifications</code> command and can add or remove the designated notification role when you request it. That preference is reflected in Discord's server role membership; the supplied code does not create a separate database of notification subscribers.</p>
+  <p>The script uses Discord's default intents and does <strong>not</strong> request the privileged Message Content Intent or archive ordinary channel messages.</p>
+  <h3 class="policy-subheading">When information is visible</h3>
+  <p>Leaderboard commands display participant names and scores in a Discord channel. To show a current name, the bot may request the member's display name from Discord using a stored user ID. An administrator can also announce new prediction events and mention the opted-in notification role. Your individual <code>/picks</code> response is private; public leaderboard posts and announcements follow Discord's own retention rules.</p>
+  <h3 class="policy-subheading">Retention and security</h3>
+  <p>Prediction records are kept in <code>predictions.db</code> across events; this version of the bot does <strong>not automatically expire</strong> them or erase them when someone leaves the server. They remain until removed by the operator or the database is retired. The bot code does not add database encryption, so protection relies on the host computer's security measures.</p>
+  <h3 class="policy-subheading">External services</h3>
+  <p>Tomoka uses <strong>Discord</strong> to receive selections, manage the notification role and publish results. It reads its event and wrestler data from locally supplied files. The supplied script does not send participants' predictions to a separate wrestling website, analytics provider or advertising service.</p>
+</article>
+<aside class="paper note-panel">
+  <p class="tiny-label">02 / Your choices</p>
+  <h2>Your prediction record.</h2>
+  <p>Use <code>/picks</code> to view your saved selections for the active event and <code>/leaderboard</code> to see competition standings. Use <code>/notifications</code> to enable or disable the optional Discord notification role.</p>
+  <h3 class="policy-subheading">Access, correction and deletion</h3>
+  <p>To request access to your prediction records, correct an account association or ask for your saved predictions to be removed, contact:</p>
+  <p><a href="mailto:blackpeach-privacy@proton.me">blackpeach-privacy@proton.me</a></p>
+  <p>Include your Discord user ID so we can identify your records. Requests are handled by the operator; the current script has <strong>no self-service deletion command</strong>. Deleting stored predictions may change historical leaderboard totals and does not remove messages already published by Discord.</p>
+  <h3 class="policy-subheading">Other privacy information</h3>
+  <ul class="verify-list">
+    <li><a href="https://discord.com/privacy" rel="noopener noreferrer">Discord Privacy Policy</a></li>
+  </ul>
+  <div class="auth-confirmed"><strong>Scope:</strong> This policy covers Tomoka's Discord interactions and prediction records. It does not cover separate tools that may prepare the local wrestling event files.</div>
+  <p class="caps">Last updated / 9 October 2026</p>
+</aside></div>
+<div class="subfoot"><span>Application 05 of 07 · The Black Peach</span><a href="../index.html#apps">← Back to all applications</a></div></div></section></main><footer class="footer"><div class="shell foot"><span><strong>THE BLACK PEACH</strong> &nbsp; / &nbsp; DISCORD APPLICATIONS</span><span>Five policies completed · Two awaiting review</span><a href="../index.html#apps">Back to applications ↑</a></div></footer></body></html>
