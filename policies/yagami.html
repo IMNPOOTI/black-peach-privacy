@@ -13,7 +13,7 @@
     <li><strong>Scrabble-style results:</strong> games played, cumulative score, highest score, bingos and full-board clears.</li>
     <li><strong>Word Power results:</strong> games played, high game score, highest-scoring word and its text, total and average-related scoring data, word counts, ranks, rank frequencies and last-played timestamp.</li>
   </ul>
-  <p>Those records are saved locally in the operator's SQLite database, <code>data/wordgames.db</code>. This is a game-statistics database, not a record of every word submitted or every Discord message read.</p>
+  <p>Those records are saved locally in the operator's database. This is a game-statistics database, not a record of every word submitted or every Discord message read.</p>
   <h3 class="policy-subheading">Information used during a game</h3>
   <p>During an active game, Yagami temporarily processes your Discord user ID, guesses or submitted words, game board, score and progress. Family Feud also temporarily keeps players' display names, guesses, strikes and scores for the round. The reviewed code keeps this active-game information in application memory and removes it when games end; it does not create a separate permanent Family Feud results table.</p>
   <p>Yagami creates game-board images as temporary local files. The reviewed game modules normally remove these files after they are attached to a Discord message. Once posted, the game display, results and attachments may remain visible in the channel according to Discord's message-retention behaviour, even after the bot forgets the active game.</p>
