@@ -11,17 +11,17 @@
     <li><strong>Discord user ID:</strong> identifies the account that earned points and links those points to its all-time and daily scores.</li>
     <li><strong>Scores:</strong> the number of correct answers credited to each participating user, in both an all-time tally and a current daily tally identified by date.</li>
   </ul>
-  <p>The scores are written to a local JSON file (<code>scores.json</code>) on the bot operator's computer. The score file stores Discord IDs and numerical totals, <strong>not a saved list of display names or complete answer histories</strong>.</p>
+  <p>The scores are written to a local file  on the bot operator's computer. The score file stores Discord IDs and numerical totals, <strong>not a saved list of display names or complete answer histories</strong>.</p>
   <h3 class="policy-subheading">What happens during a trivia question</h3>
   <p>While a question is active, Icon temporarily keeps track of which Discord user IDs have already answered it. This prevents repeated attempts on the same question, whether an answer was right or wrong. That temporary list is held in memory and is not written to the score file. Only correct answers increase stored point totals.</p>
   <p>The bot uses Discord's <strong>Server Members Intent</strong> and member information to display current names alongside the top scores. The script does <strong>not</strong> enable the privileged Message Content Intent, scan ordinary chat messages or save channel conversations.</p>
   <h3 class="policy-subheading">When information is visible</h3>
   <p>Leaderboard commands publish the top ten participants' names and point totals in the Discord channel. The bot also posts a public notice identifying whether a participant answered correctly or incorrectly; on incorrect answers, the correct option is shown privately to the participant. These Discord messages are subject to Discord's own retention and deletion practices.</p>
   <h3 class="policy-subheading">Retention and security</h3>
-  <p>All-time scores stay in <code>scores.json</code> until removed by the operator or the file is retired. The daily tally is replaced when the next correctly answered question occurs on a different date; it is not maintained as a permanent daily history by the supplied code. Leaving the server does not automatically remove an all-time score.</p>
+  <p>All-time scores stay in the file until removed by the operator or the file is retired. The daily tally is replaced when the next correctly answered question occurs on a different date; it is not maintained as a permanent daily history by the supplied code. Leaving the server does not automatically remove an all-time score.</p>
   <p>The JSON file is not encrypted by the bot itself. Its security depends on access controls and protection of the device where it is stored.</p>
   <h3 class="policy-subheading">External services</h3>
-  <p>Icon uses <strong>Discord</strong> for commands, interactions and leaderboards. Trivia questions come from a local question file (<code>trivia.json</code>). The supplied code does not transmit player scores to an external trivia provider or advertising service.</p>
+  <p>Icon uses <strong>Discord</strong> for commands, interactions and leaderboards. Trivia questions come from a local question file. The supplied code does not transmit player scores to an external trivia provider or advertising service.</p>
 </article>
 <aside class="paper note-panel">
   <p class="tiny-label">02 / Your choices</p>
