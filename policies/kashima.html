@@ -16,7 +16,7 @@
   </ul>
   <div class="auth-confirmed"><strong>What Kashima does not do:</strong> It does not request the privileged Message Content Intent, monitor ordinary channel conversations or store a message archive. It does not collect payment or banking information.</div>
   <h3 class="policy-subheading">Where information is kept</h3>
-  <p>Participant records are saved in a local SQLite database (<code>kashima.db</code>) operated by the bot owner. The bot also keeps UFC event schedule data in a local cache; this schedule is not a database of Discord members.</p>
+  <p>Participant records are saved in a local database operated by the bot owner. The bot also keeps UFC event schedule data in a local cache; this schedule is not a database of Discord members.</p>
   <p>Before certain administrative fight-closing operations, Kashima makes local database backups for recovery. Its code keeps up to <strong>five of the most recent database backup files</strong>; backups may contain earlier copies of account and betting records. The code does not set a maximum age for those backups.</p>
   <h3 class="policy-subheading">When information is visible</h3>
   <p>Some information is deliberately shared in the Discord server as part of the game: public standings show display names, virtual wallet values and debt; closing a fight posts active betting tickets and parlay details, which may include names and stakes. Individual <code>/wallet</code> responses are private (ephemeral), while other betting announcements can appear publicly. Messages already sent to Discord are subject to Discord's own retention and deletion behaviour.</p>
