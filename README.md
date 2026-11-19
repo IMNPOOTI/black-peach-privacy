@@ -8,7 +8,7 @@ Each application has its own privacy policy, prepared from the application's des
 
 | Application | Purpose | Policy |
 | --- | --- | --- |
-| Hooves of Thunder | Discord authentication for the horse racing website | [Privacy policy](policies/hooves-of-thunder.html) |
+| Dealer's Choice Poker | Community Poker Game | [Privacy policy](policies/dealers-choice.html) |
 | Icon | Trivia | [Privacy policy](policies/icon.html) |
 | Kashima | UFC betting with virtual currency | [Privacy policy](policies/kashima.html) |
 | Lady C | Chess puzzles and ratings | [Privacy policy](policies/lady-c.html) |
